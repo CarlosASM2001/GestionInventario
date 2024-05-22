@@ -1,0 +1,207 @@
+<body>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
+
+    <script src="./homeMain.js" type="module"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Gestion de Inventario</a>
+        </li>
+        <li class="nav-item" id="nav-item-button">
+            <button class="btn" id="logout-btn">Logout</button>
+        </li>
+    </ul>
+    <!--
+    <div class="container" id="container-beans">
+        
+        <div class="row">
+          <div class="col">
+            <p id="item">ID</p>
+          </div>
+          <div class="col">
+            <p id="item">Stock</p>
+          </div>
+          <div class="col">
+            <p id="item">Demanda</p>
+          </div>
+          <div class="col">
+            <p id="item">Fecha</p>
+          </div>
+        </div>
+    </div>-->
+
+    <form class="container" id="beans-form">
+        <h2>GRAIN</h2>
+        <div class="row">
+          <div class="col">
+            <input id="id-beans" type="text" class="input-field" placeholder="ID">
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="col">
+            <input id="stock-beans" type="text" class="input-field" placeholder="Stock">
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="col">
+            <input id="demand-beans" type="text" class="input-field" placeholder="Demand">
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="col">
+            <input id="date-beans" type="datetime-local" class="input-field" placeholder="Date">
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="col">
+            <input type="submit" class="submit" value="Load Data">
+          </div>
+        </div>
+    </form>
+
+    <form class="container" id="charts-form-beans">
+      <div class="row">
+        <div class="col">
+          <input id="id-visual-beans" type="text" class="input-field" placeholder="Introduce ID">
+          <i class="bx bx-user"></i>
+        </div>
+        <div class="col">
+          <input type="submit" class="submit" value="Visualize Data">
+        </div>
+        <div id="chart-beans" class="col-6"></div>
+      </div>
+    </form>
+
+
+
+    <!--<div class="container" id="container-corn">
+        <div class="row">
+          <div class="col">
+            <p id="item">ID</p>
+          </div>
+          <div class="col">
+            <p id="item">Stock</p>
+          </div>
+          <div class="col">
+            <p id="item">Demanda</p>
+          </div>
+          <div class="col">
+            <p id="item">Fecha</p>
+          </div>
+        </div>
+    </div>-->
+
+    <form class="container" id="corn-form">
+        <h2>CORN</h2>
+        <div class="row">
+          <div class="col">
+            <input id="id-corn" type="text" class="input-field" placeholder="ID">
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="col">
+            <input id="stock-corn" type="text" class="input-field" placeholder="Stock">
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="col">
+            <input id="demand-corn" type="text" class="input-field" placeholder="Demand">
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="col">
+            <input id="date-corn" type="datetime-local" class="input-field" placeholder="Date">
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="col">
+            <input type="submit" class="submit" value="Load Data">
+          </div>
+        </div>
+    </form>
+
+
+    <form class="container" id="charts-form-corn">
+      <div class="row">
+        <div class="col">
+          <input id="id-visual-corn" type="text" class="input-field" placeholder="Introduce ID">
+          <i class="bx bx-user"></i>
+        </div>
+        <div class="col">
+          <input type="submit" class="submit" value="Visualize Data">
+        </div>
+        <div id="chart-corn" class="col-6"></div>
+      </div>
+    </form>
+
+
+    <!--<div class="container" id="container-pressure">
+        
+        <div class="row">
+          <div class="col">
+            <p id="item">ID</p>
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="col">
+            <p id="item">Presion</p>
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="col">
+            <p id="item">Presion Minima</p>
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="col">
+            <p id="item">Fecha</p>
+            <i class="bx bx-user"></i>
+          </div>
+        </div>
+    </div>-->
+
+    <form class="container" id="pressure-form">
+        <h2>PRESSURE</h2>
+        <div class="row">
+          <div class="col">
+            <input id="id-pressure" type="text" class="input-field" placeholder="ID">
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="col">
+            <input id="actual-pressure" type="text" class="input-field" placeholder="Presion">
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="col">
+            <input id="min-pressure" type="text" class="input-field" placeholder="Presion Minima">
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="col">
+            <input id="date-pressure" type="datetime-local" class="input-field" placeholder="Date">
+            <i class="bx bx-user"></i>
+          </div>
+          <div class="col">
+            <input type="submit" class="submit" value="Load Data">
+          </div>
+        </div>
+    </form>
+
+    <form class="container" id="charts-form-pressure">
+      <div class="row">
+        <div class="col">
+          <input id="id-visual-pressure" type="text" class="input-field" placeholder="Introduce ID">
+          <i class="bx bx-user"></i>
+        </div>
+        <div class="col">
+          <input type="submit" class="submit" value="Visualize Data">
+        </div>
+        <div id="chart-pressure" class="col-6"></div>
+      </div>
+    </form>
+
+
+
+    
+
+
+
+
+
+
+
+    
+  
+
+
+</body>
+
